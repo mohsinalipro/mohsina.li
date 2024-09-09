@@ -28,7 +28,7 @@ export const handler: Handlers = {
 export default function MarkdownPost(props: PageProps) {
   return (
     <main class="mx-auto w-min-screen min-h-screen relative">
-      <Navbar sections={props.data.sections} />
+      <Navbar sections={props.data.sections} />adf
       <article class="lg:p-36 md:px-20 sm:px-16 px-10 py-28">
         <Post markup={props.data.markup} />
       </article>

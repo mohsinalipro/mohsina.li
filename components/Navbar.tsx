@@ -6,17 +6,23 @@ type NavbarProps = {
 
 export default function Navbar(props: NavbarProps) {
   return (
-    <nav
-      class="top-0 w-full h-20 lg:px-36 md:px-20 sm:px-16 px-10 bg-gray-900 absolute flex items-center gap-10"
-    >
-      <a href="/" class="text-white border-none my-0 mr-10 text-2xl hover:text-red-400">
-        <img src="/title.png" alt="GG'Blog" class="h-8 w-auto"/>
-      </a>
+    <header className="bg-[#FFD54F] p-4">
+    <div className="container mx-auto flex justify-between items-center">
+      <div className="text-2xl font-bold">
+        <span className="text-gray-800">Mohsin Ali</span>
+      </div>
+      <nav>
+        <ul className="flex space-x-6 text-sm">
       {props.sections.map((section) => (
-        <a href={`/${section}`} class="text-white my-0 capitalize text-lg hover:text-red-400 hidden md:block">
-          {section}
-        </a>
+        <li>
+          <a href={`/${section}`} class="text-[#333333] hover:text-gray-600 capitalize">
+            {section}
+          </a>
+        </li>
       ))}
-    </nav>
+        </ul>
+      </nav>
+    </div>
+  </header>
   );
 }
